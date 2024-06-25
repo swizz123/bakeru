@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="main5.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        
+            <ul class="menu__box">
+              <li><a class="menu__item" href="index.html">Главная</a></li>
+              <li><a class="menu__item" href="index2.html">О нас</a></li>
+              <li><a class="menu__item" href="index3.html">Новости и акции</a></li>
+              <li><a class="menu__item" href="index4.html">Меню</a></li>
+              <li><a class="menu__item" href="#">Корзина</a></li>
+            </ul>
+          </div>
+        <div class="title">Здрасте</div>
+        <button class="title__register" onclick="openModal()">Регистрация</button>
+    </header>
+
+    <main class="main">
+       
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeModal()">&times;</span>
+            <div class="modal__forms">
+                <div class="modal__tab">
+                    <button class="modal__tablinks" onclick="openForm(event, 'register')">Регистрация</button>
+                    <button class="modal__tablinks" onclick="openForm(event, 'login')">Авторизация</button>
+                </div>
+
+                <div id="register" class="modal__form">
+                    <h2>Регистрация</h2>
+                    <form action="/register" method="post">
+                        <label for="register-name">Имя:</label>
+                        <input type="text" id="register-name" name="name" required>
+                        
+                        <label for="register-email">Электронная почта:</label>
+                        <input type="email" id="register-email" name="email" required>
+                        
+                        <label for="register-password">Пароль:</label>
+                        <input type="password" id="register-password" name="password" required>
+                        
+                        <button type="submit">Зарегистрироваться</button>
+                    </form>
+                </div>
+
+                <div id="login" class="modal__form">
+                    <h2>Авторизация</h2>
+                    <form action="/login" method="post">
+                        <label for="login-email">Электронная почта:</label>
+                        <input type="email" id="login-email" name="email" required>
+                        
+                        <label for="login-password">Пароль:</label>
+                        <input type="password" id="login-password" name="password" required>
+                        
+                        <button type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    
+
+</body>
+</html>
